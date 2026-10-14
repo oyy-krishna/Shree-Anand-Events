@@ -1,41 +1,29 @@
 # Shree Anand — Website Project
 
 **Client:** Shree Anand Caterers & Decorators, Noida  
-**Team:** Bennett University, B.Tech CSE (university project)  
-**Live URL:** [NEEDS CLIENT CONFIRMATION: domain]  
-**Stack:** Next.js 15 · TypeScript · Tailwind CSS v4 · Vercel  
+**Team:** Bennett University (university project)  
+**Live URL:** [NEEDS: Vercel URL after Chunk 10]  
+**Stack:** Next.js 16 · TypeScript · Tailwind CSS v4 · Vercel  
 
 ---
 
 ## Quick Start
 
 ```bash
-# 1. Clone the repo
-git clone https://github.com/<your-org>/shree-anand.git
-cd shree-anand
-
-# 2. Install dependencies
 npm install
-
-# 3. Set up environment variables
 cp .env.example .env.local
-# Edit .env.local — fill in RESEND_API_KEY and NEXT_PUBLIC_SITE_URL
-
-# 4. Start the dev server
+# Edit .env.local — RESEND_API_KEY later for Chunk 7; SITE_URL after deploy
 npm run dev
 # → http://localhost:3000
 ```
 
-## Build & Deploy
-
 ```bash
-npm run build    # production build
-npm run start    # run production build locally
-npm run lint     # ESLint check
-npm run format   # Prettier format
+npm run build
+npm run start
+npm run lint
+npm run typecheck
+npm run format
 ```
-
-Deployment is automatic: push to `main` → Vercel deploys.
 
 ---
 
@@ -54,15 +42,18 @@ lib/            Utilities (tokens, metadata factory, gallery data)
 public/
   images/       Web-optimised photos (WebP + JPEG fallback)
 docs/           Project documentation (this folder)
+raw-assets/     PDFs + extractions (gitignored)
 ```
 
 ## Docs
 
 | File | Purpose |
 |---|---|
-| [decisions.md](decisions.md) | Every design and tech decision with rationale |
-| [content-todo.md](content-todo.md) | Missing content, unconfirmed facts, client blockers |
-| [qa-report.md](qa-report.md) | Lighthouse scores, a11y audit, cross-browser results (Chunk 9) |
+| [chunk-0-plan.md](chunk-0-plan.md) | Chunk 0 plan, tokens, gaps, runbook |
+| [asset-inventory.md](asset-inventory.md) | Curated photo inventory |
+| [decisions.md](decisions.md) | Design and tech decisions |
+| [content-todo.md](content-todo.md) | Missing content and client blockers |
+| [qa-report.md](qa-report.md) | Lighthouse / a11y (Chunk 9) |
 
 ---
 

@@ -11,18 +11,19 @@ Last updated: 14 Oct 2026
 
 | # | Item | Blocks | Status |
 |---|---|---|---|
-| A1 | `Shree_Anand_Profile.pdf` — company deck | Chunks 1-4, About, Gallery | ❌ Not received |
-| A2 | `Expo_Mart_21_Nov.pdf` — decor proposal (~62 MB) | Decoration page, Gallery palette | ❌ Not received |
-| A3 | Gold crest logo — transparent-background PNG or SVG | Header, Footer (dark surfaces) | ❌ Not received — current file has opaque cream bg |
-| A4 | Logo B (plate & cutlery roundel) — original file | Decisions | ❌ Not received |
-| A5 | Logo C (black & gold wordmark) — original file | Decisions | ❌ Not received |
-| A6 | Founders photo (Mr Sunil Anand & Mr Vivek Anand) | About Us | ❌ Pending client permission |
+| A1 | `Shree_Anand_Profile.pdf` — company deck | Chunks 1–4, About, Gallery | ✅ Received (compressed) — extracted; originals preferred for hero sharpness |
+| A2 | `Expo_Mart_21_Nov.pdf` — decor proposal | Decorations, Gallery | ✅ Received (compressed) — extracted; public use confirmed (F4) |
+| A3 | Gold crest logo — transparent-background PNG or SVG | Header, Footer (dark surfaces) | 🔴 Current file has opaque cream bg |
+| A4 | Logo B (plate & cutlery roundel) — original file | Decisions / styleguide | 🟡 Embedded in Expo Mart only |
+| A5 | Logo C (black & gold wordmark) — original file | Decisions | 🟡 Not received as clean file |
+| A6 | Founders photo (Mr Sunil Anand & Mr Vivek Anand) | About Us | 🟠 Photo exists (`expo-mart/p05-img02`) — pending permission to publish |
 | A7 | Team photos (400+ staff claim) | About Us | ❌ Not received |
 | A8 | Event photography: haldi ceremony | Gallery | ❌ Not received |
 | A9 | Event photography: mehendi ceremony | Gallery | ❌ Not received |
 | A10 | Event photography: engagement ceremony | Gallery | ❌ Not received |
 | A11 | Event photography: corporate events | Gallery | ❌ Not received |
 | A12 | Event photography: catering / buffet setups | Gallery, Catering page | ❌ Not received |
+| A13 | Original high-res event photos (not compressed PDF embeds) | Hero, Lighthouse | 🟡 Compressed extracts are soft at large sizes |
 
 ---
 
@@ -30,21 +31,21 @@ Last updated: 14 Oct 2026
 
 | # | Item | Location | Status |
 |---|---|---|---|
-| F1 | **Founding year / experience:** Logo says "Since 1985" (~41 years). Deck says "25+ years". Which is correct? | Every page, About Us | ❌ [NEEDS CLIENT CONFIRMATION: founding year] |
-| F2 | **Primary logo:** Which of the three variants (A gold crest / B plate roundel / C wordmark) is the approved primary? | All pages | ❌ [NEEDS CLIENT CONFIRMATION: primary logo] |
-| F3 | **Domain ownership:** Does the client own www.shreeanandcaterers.com? | Chunk 10, canonical URLs, all meta | ❌ [NEEDS CLIENT CONFIRMATION: domain] |
-| F4 | **Expo Mart proposal visibility:** The India Expo Mart Lawn event (21 Nov 2026) is a future/proposed event for a specific client. May it be shown publicly? | Decoration page, Gallery | ❌ [NEEDS CLIENT CONFIRMATION: public permission] |
-| F5 | **Stats accuracy:** 2500+ clients, 2000+ events, 400+ team members, 100+ decor setups — are these current and approved? | Home (Stats), About | ❌ [NEEDS CLIENT CONFIRMATION: stats accuracy] |
-| F6 | **Service area:** Which cities/regions does Shree Anand serve? Deck only mentions Noida. | Contact page, SEO | ❌ [NEEDS CLIENT CONFIRMATION: service area] |
-| F7 | **WhatsApp number:** Is +91 98185 23902 active on WhatsApp? | All pages (floating button) | ❌ [NEEDS CLIENT CONFIRMATION: WhatsApp active] |
+| F1 | **Founding year / experience:** Logo says "Since 1985" (~41 years). Deck says "25+ years". | Every page, About Us | ✅ **CONFIRMED: "Since 1985"** (14 Oct 2026) |
+| F2 | **Primary logo:** A gold crest / B plate roundel / C wordmark | All pages | ✅ **CONFIRMED: Gold crest (Logo A)** (14 Oct 2026) |
+| F3 | **Domain ownership:** www.shreeanandcaterers.com | Chunk 10, canonical URLs | ✅ **CONFIRMED: Vercel subdomain** for submission (14 Oct 2026) |
+| F4 | **Expo Mart proposal visibility** (India Expo Mart Lawn, 21 Nov 2026) | Decorations, Gallery | ✅ **CONFIRMED: may show publicly** — still label as upcoming/proposal, not completed (14 Oct 2026) |
+| F5 | **Stats accuracy:** 2500+ clients, 2000+ events, 400+ team members, 100+ decor setups | Home (Stats), About | ❌ [NEEDS CLIENT CONFIRMATION: stats accuracy] |
+| F6 | **Service area:** Cities/regions beyond Noida? | Contact, SEO | ❌ [NEEDS CLIENT CONFIRMATION: service area] |
+| F7 | **WhatsApp number:** Is +91 98185 23902 active on WhatsApp? | Floating button | ❌ [NEEDS CLIENT CONFIRMATION: WhatsApp active] |
 
 ---
 
 ## Catering Page Placeholders
 
-The following sections on `/services/catering` are deliberately empty pending content from the client. Do not invent this content.
+The following sections on `/services/catering` stay empty until the client supplies content. Do not invent.
 
-- [ ] Cuisine types offered (North Indian, Mughlai, South Indian, etc.)
+- [ ] Cuisine types offered
 - [ ] Sample menu / course structure
 - [ ] Buffet setup styles
 - [ ] Minimum guest count / pricing range
@@ -55,7 +56,7 @@ The following sections on `/services/catering` are deliberately empty pending co
 
 ## Gallery Categories Without Photos
 
-The gallery filter will include all six categories. Categories without photos display a "Photos coming soon" placeholder. The following are currently empty:
+Filter includes all six categories. Empty categories show “Photos coming soon”.
 
 | Category | Photos needed |
 |---|---|
@@ -65,22 +66,29 @@ The gallery filter will include all six categories. Categories without photos di
 | Catering | Buffet setup, food spreads |
 | Corporate Events | Conference / corporate décor |
 
-The **Weddings** category will be populated from the Profile and Expo Mart PDFs once received and permissions confirmed.
+**Weddings** can be populated from Profile + Expo Mart extracts (after WebP optimise). See `docs/asset-inventory.md`.
 
 ---
 
 ## Blog Posts — Factual Review Needed
 
-Four starter blog posts will be written in Chunk 6. Every claim that is not directly sourced from the brief or client-supplied materials will be marked `[REVIEW: ...]` inline and listed here for client sign-off before publishing.
+Four starter posts in Chunk 6. Claims not sourced from the brief will be marked `[REVIEW: …]` and listed here.
 
 ---
 
 ## Testimonials
 
-No testimonials, client names or reviews were supplied. The testimonials section will show a placeholder until the client provides real reviews. Do not fabricate reviews.
+No testimonials, client names or reviews supplied. Placeholder only — do not fabricate.
 
 ---
 
 ## Resolved Items
 
-*(None yet — items move here when confirmed)*
+| # | Resolution | Date |
+|---|---|---|
+| F1 | Use **Since 1985** everywhere (not “25+ years” as headline) | 14 Oct 2026 |
+| F2 | Primary logo = **Gold crest (A)** | 14 Oct 2026 |
+| F3 | Deploy on **Vercel subdomain**; no custom domain for faculty submission | 14 Oct 2026 |
+| F4 | Expo Mart materials **may be shown publicly**; describe as proposal / upcoming (21 Nov 2026), never as finished past work | 14 Oct 2026 |
+| A1 | Profile PDF received (compressed) and extracted | 14 Oct 2026 |
+| A2 | Expo Mart PDF received (compressed) and extracted | 14 Oct 2026 |

@@ -63,7 +63,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#6B1D2E', // burgundy — matches mobile browser chrome
+  themeColor: '#52232c', // burgundy — sampled from Logo B / tokens
 }
 
 // ── Layout ───────────────────────────────────────────────────────────────────

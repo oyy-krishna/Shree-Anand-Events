@@ -7,44 +7,46 @@
  *   3. Base styles — element resets, focus rings, reduced motion
  *   4. Utility classes — reusable patterns not in Tailwind by default
  *
- * Colour sources:
- *   - Gold tones: hand-sampled from the gold crest logo (see docs/decisions.md D04)
- *   - Burgundy / wine / terracotta / rosewood: approximated from brief description of
- *     Expo Mart "Premium Theme" palette board. Will be corrected to exact hex values
- *     in Chunk 1 once the Expo Mart PDF is extracted. [NEEDS CLIENT CONFIRMATION]
+ * Colour sources (sampled — see docs/chunk-0-plan.md §4 and docs/decisions.md D11):
+ *   - Gold + cream: gold crest logo
+ *   - Golden brown / tan / terracotta / rosewood / black-brown: Premium Theme
+ *     palette board (profile extract p02-img02)
+ *   - Burgundy / wine: Logo B maroon field + venue drapery photography
  */
 
 @import 'tailwindcss';
 
 /* ─── 1. Design Tokens ────────────────────────────────────────────────────── */
 
-@theme {
-  /* ── Fonts ─────────────────────────────────────────────────────────────── */
-  --font-serif: var(--font-serif); /* Libre Baskerville — set by next/font */
-  --font-sans: var(--font-sans);   /* Poppins — set by next/font */
+@theme inline {
+  /* ── Fonts are injected by next/font onto the html element as CSS vars.
+     Tailwind picks them up via the className applied in layout.tsx.
+     No explicit font tokens needed here. ────────────────────────────────── */
 
   /* ── Colour palette ─────────────────────────────────────────────────────── */
 
-  /* Gold — sampled from the gold crest logo */
-  --color-gold-primary: #c9963a;  /* Main lettering and ornament gold */
-  --color-gold-light:   #e8c96a;  /* Highlight / shimmer */
-  --color-gold-dark:    #9a6f2a;  /* Shadow / deep recesses */
-  --color-gold-muted:   #c9963a33; /* 20 % opacity gold — subtle dividers */
+  /* Gold — sampled from the gold crest logo lettering / filigree */
+  --color-gold-primary: #cdaa58;  /* Mid metal gold */
+  --color-gold-light:   #e8bc5d;  /* Highlight / shimmer */
+  --color-gold-dark:    #8d651f;  /* Shadow / deep recesses */
+  --color-gold-muted:   #cdaa5833; /* 20 % opacity gold — subtle dividers */
 
   /* Cream — logo background and light page surfaces */
-  --color-cream:        #f7f0e3;  /* Main light background */
-  --color-cream-deep:   #ede3cc;  /* Deeper cream — alternate section bg */
+  --color-cream:        #fdf6e4;  /* Logo background */
+  --color-cream-deep:   #eedfb3;  /* Ribbon fill / alternate section bg */
   --color-cream-border: #d9c9a8;  /* Borders on cream surfaces */
 
-  /* Dark / rich tones — from Expo Mart "Premium Theme" deck (approximated) */
-  --color-burgundy:     #6b1d2e;  /* Section overlays, dark hero bg */
-  --color-wine:         #4a0f1e;  /* Deepest background — footer, nav overlay */
-  --color-rosewood:     #8b3a52;  /* Secondary accent */
-  --color-terracotta:   #c4603a;  /* Warm accent — tags, highlights */
-  --color-sand:         #d4b896;  /* Body text on dark backgrounds */
+  /* Premium Theme board + Logo B / drapery */
+  --color-burgundy:     #52232c;  /* Logo B maroon — hero / overlays */
+  --color-wine:         #360509;  /* Deepest drapery red — footer */
+  --color-rosewood:     #4f1a0e;  /* DMC 3857 Dark Rosewood */
+  --color-terracotta:   #a15344;  /* DMC 356 Medium Terra Cotta */
+  --color-terracotta-deep: #7a2f2e; /* DMC 3777 Very Dark Terra Cotta */
+  --color-golden-brown: #a0551d;  /* DMC 3826 Golden Brown */
+  --color-sand:         #b17d45;  /* DMC 436 Tan — text on dark */
 
   /* Neutral */
-  --color-near-black:   #1a0a0e;  /* Primary text on light surfaces */
+  --color-near-black:   #1f0c06;  /* DMC 3371 Black Brown — text on light */
   --color-white:        #ffffff;
 
   /* ── Semantic aliases ────────────────────────────────────────────────────── */

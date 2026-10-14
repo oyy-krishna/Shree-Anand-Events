@@ -6,10 +6,10 @@ Last updated: 14 Oct 2026
 
 ---
 
-## D01 — Framework: Next.js 15 with App Router
+## D01 — Framework: Next.js 16 with App Router
 
 **Date:** 14 Oct 2026  
-**Decision:** Use Next.js 15 (App Router) with TypeScript.  
+**Decision:** Use Next.js 16.4 (App Router) with TypeScript.  
 **Alternatives considered:** Plain HTML/CSS/JS, Astro, Remix.  
 **Rationale:**
 - App Router provides Server Components (no JS shipped for static content → faster load)
@@ -17,7 +17,7 @@ Last updated: 14 Oct 2026
 - File-based routing gives every page its own URL with zero configuration
 - Vercel (the deployment target) is built by the same team — zero-config deploy
 - TypeScript catches errors at compile time — important for a viva where every line must be explainable
-- Industry standard in 2026 — faculty are likely to recognise it
+- Latest stable create-next-app baseline at project start (16.4.0 in package.json)
 
 ---
 
@@ -129,11 +129,21 @@ Last updated: 14 Oct 2026
 
 ---
 
-## D10 — Expo Mart Proposal: Confidential until confirmed
+## D10 — Expo Mart Proposal: Public with accurate framing
+
+**Date:** 14 Oct 2026 (updated after confirmation)  
+**Decision:** Expo Mart décor photography **may** appear on the site. Always frame it as a **proposed / upcoming** Premium Theme for India Expo Mart Lawn (21 Nov 2026), never as completed past work. Do not invent a client name.  
+**Rationale:**
+- Team confirmed public use (content-todo F4)
+- The event date is still in the future relative to build date (14 Oct 2026)
+- Accurate framing protects the business and keeps the viva story honest
+
+---
+
+## D11 — Colour tokens sampled from real assets
 
 **Date:** 14 Oct 2026  
-**Decision:** No content from `Expo_Mart_21_Nov.pdf` will appear on the live site until the client confirms the photos may be shown publicly.  
+**Decision:** Replace approximated palette hex values with samples from (1) gold crest logo, (2) Premium Theme Stitch Palettes board (`profile/p02-img02`), (3) Logo B maroon + burgundy drapery photos.  
 **Rationale:**
-- The proposal is for a named client event (India Expo Mart Lawn, 21 Nov 2026)
-- Publishing another client's event details without permission is a privacy and business risk
-- The event date is in the future — showing it as "completed work" would be inaccurate
+- Brief forbids guessing hex values
+- Tokens documented in `docs/chunk-0-plan.md` §4 and implemented in `app/globals.css` + `lib/tokens.ts`
