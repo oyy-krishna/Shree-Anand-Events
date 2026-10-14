@@ -1,12 +1,10 @@
-/**
- * Root layout — mounts brand fonts and base metadata.
- * Fonts are self-hosted by next/font/google (zero layout shift, no external requests).
- */
 import type { Metadata, Viewport } from 'next'
 import { Libre_Baskerville, Poppins } from 'next/font/google'
-import './globals.css'
 
-// ── Brand fonts ─────────────────────────────────────────────────────────────
+import { Footer } from '../components/layout/Footer'
+import { FloatingActions } from '../components/layout/FloatingActions'
+import { Header } from '../components/layout/Header'
+import './globals.css'
 
 const libreBaskerville = Libre_Baskerville({
   subsets: ['latin'],
@@ -23,10 +21,7 @@ const poppins = Poppins({
   display: 'swap',
 })
 
-// ── Site-wide metadata (per-page metadata is set in each page.tsx) ───────────
-
 export const metadata: Metadata = {
-  // Title template: page titles show as "Page Name | Shree Anand"
   title: {
     default: 'Shree Anand Caterers & Decorators | Wedding Planner in Noida',
     template: '%s | Shree Anand',
@@ -44,7 +39,6 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Shree Anand Caterers & Decorators' }],
   creator: 'Shree Anand Caterers & Decorators',
-  // Canonical / OG URL updated per-page; this is the fallback
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000',
   ),
@@ -63,10 +57,8 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#52232c', // burgundy — sampled from Logo B / tokens
+  themeColor: '#52232c',
 }
-
-// ── Layout ───────────────────────────────────────────────────────────────────
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -74,12 +66,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="en"
       className={`${libreBaskerville.variable} ${poppins.variable} h-full scroll-smooth`}
     >
-      {/*
-       * antialiased: sub-pixel font rendering
-       * min-h-full flex flex-col: footer pushed to bottom on short pages
-       */}
       <body className="font-sans antialiased min-h-full flex flex-col bg-cream text-near-black">
+        <Header />
         {children}
+        <Footer />
+        <FloatingActions />
       </body>
     </html>
   )
