@@ -1,24 +1,25 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  // Enable React strict mode for catching bugs early
   reactStrictMode: true,
+  poweredByHeader: false,
+  compress: true,
 
-  // Allow images from these external domains (add more as needed)
   images: {
     formats: ['image/avif', 'image/webp'],
-    remotePatterns: [
-      // Add external image domains here as needed
-    ],
+    remotePatterns: [],
   },
 
-  // Redirect bare http:// and www to https:// canonical (Vercel handles this too,
-  // but explicit is better for local awareness)
   async redirects() {
-    return []
+    return [
+      {
+        source: '/:path+/',
+        destination: '/:path+',
+        permanent: true,
+      },
+    ]
   },
 
-  // Security headers (basic set; Chunk 9 will harden these)
   async headers() {
     return [
       {
@@ -31,6 +32,11 @@ const nextConfig: NextConfig = {
           {
             key: 'Permissions-Policy',
             value: 'camera=(), microphone=(), geolocation=()',
+          },
+          {
+            key: 'Content-Security-Policy',
+            value:
+              "default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://api.resend.com; frame-ancestors 'none';",
           },
         ],
       },
