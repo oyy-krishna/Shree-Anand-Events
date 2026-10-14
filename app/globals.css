@@ -1,0 +1,184 @@
+/*
+ * globals.css — Design system foundation for Shree Anand Caterers & Decorators
+ *
+ * Structure:
+ *   1. Tailwind import
+ *   2. @theme — design tokens (colours, fonts, spacing, type scale)
+ *   3. Base styles — element resets, focus rings, reduced motion
+ *   4. Utility classes — reusable patterns not in Tailwind by default
+ *
+ * Colour sources:
+ *   - Gold tones: hand-sampled from the gold crest logo (see docs/decisions.md D04)
+ *   - Burgundy / wine / terracotta / rosewood: approximated from brief description of
+ *     Expo Mart "Premium Theme" palette board. Will be corrected to exact hex values
+ *     in Chunk 1 once the Expo Mart PDF is extracted. [NEEDS CLIENT CONFIRMATION]
+ */
+
+@import 'tailwindcss';
+
+/* ─── 1. Design Tokens ────────────────────────────────────────────────────── */
+
+@theme {
+  /* ── Fonts ─────────────────────────────────────────────────────────────── */
+  --font-serif: var(--font-serif); /* Libre Baskerville — set by next/font */
+  --font-sans: var(--font-sans);   /* Poppins — set by next/font */
+
+  /* ── Colour palette ─────────────────────────────────────────────────────── */
+
+  /* Gold — sampled from the gold crest logo */
+  --color-gold-primary: #c9963a;  /* Main lettering and ornament gold */
+  --color-gold-light:   #e8c96a;  /* Highlight / shimmer */
+  --color-gold-dark:    #9a6f2a;  /* Shadow / deep recesses */
+  --color-gold-muted:   #c9963a33; /* 20 % opacity gold — subtle dividers */
+
+  /* Cream — logo background and light page surfaces */
+  --color-cream:        #f7f0e3;  /* Main light background */
+  --color-cream-deep:   #ede3cc;  /* Deeper cream — alternate section bg */
+  --color-cream-border: #d9c9a8;  /* Borders on cream surfaces */
+
+  /* Dark / rich tones — from Expo Mart "Premium Theme" deck (approximated) */
+  --color-burgundy:     #6b1d2e;  /* Section overlays, dark hero bg */
+  --color-wine:         #4a0f1e;  /* Deepest background — footer, nav overlay */
+  --color-rosewood:     #8b3a52;  /* Secondary accent */
+  --color-terracotta:   #c4603a;  /* Warm accent — tags, highlights */
+  --color-sand:         #d4b896;  /* Body text on dark backgrounds */
+
+  /* Neutral */
+  --color-near-black:   #1a0a0e;  /* Primary text on light surfaces */
+  --color-white:        #ffffff;
+
+  /* ── Semantic aliases ────────────────────────────────────────────────────── */
+  /* Use these in components to decouple from raw palette names */
+  --color-background:   var(--color-cream);
+  --color-foreground:   var(--color-near-black);
+  --color-primary:      var(--color-gold-primary);
+  --color-primary-hover: var(--color-gold-dark);
+  --color-accent:       var(--color-burgundy);
+  --color-muted:        var(--color-sand);
+
+  /* ── Type scale (fluid, clamp-based) ────────────────────────────────────── */
+  --text-display: clamp(3rem, 6vw, 5rem);       /* Hero headlines */
+  --text-h1:      clamp(2rem, 4vw, 3rem);       /* Page H1 */
+  --text-h2:      clamp(1.5rem, 3vw, 2.25rem);  /* Section headings */
+  --text-h3:      clamp(1.25rem, 2vw, 1.5rem);  /* Card headings */
+  --text-body-lg: 1.125rem;                     /* Lead paragraphs */
+  --text-body:    1rem;                         /* Body copy */
+  --text-small:   0.875rem;                     /* Captions, meta */
+  --text-xs:      0.75rem;                      /* Labels, badges */
+
+  /* ── Letter spacing ─────────────────────────────────────────────────────── */
+  --tracking-display:  0.08em;   /* Display and H1 — wide, engraved feel */
+  --tracking-heading:  0.04em;   /* H2 and H3 */
+  --tracking-caps:     0.12em;   /* All-caps labels */
+
+  /* ── Spacing ─────────────────────────────────────────────────────────────── */
+  --section-pad-y:    clamp(4rem, 8vw, 7rem);   /* Vertical section padding */
+  --container-max:    1280px;                    /* Max content width */
+  --container-pad:    clamp(1rem, 4vw, 2rem);   /* Horizontal padding */
+
+  /* ── Border radius ──────────────────────────────────────────────────────── */
+  --radius-card:    0.5rem;   /* Cards */
+  --radius-button:  0.25rem;  /* Buttons — restrained, not pill */
+  --radius-badge:   9999px;   /* Pill badges */
+
+  /* ── Shadows ────────────────────────────────────────────────────────────── */
+  --shadow-card:    0 4px 24px 0 rgba(26, 10, 14, 0.10);
+  --shadow-gold:    0 2px 12px 0 rgba(201, 150, 58, 0.25);
+
+  /* ── Transitions ────────────────────────────────────────────────────────── */
+  --duration-fast:   150ms;
+  --duration-base:   250ms;
+  --duration-slow:   400ms;
+  --ease-standard:   cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── 2. Base styles ──────────────────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Focus ring — visible and on-brand for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--color-gold-primary);
+  outline-offset: 3px;
+}
+
+/* Headings use the serif font */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  letter-spacing: var(--tracking-heading);
+  line-height: 1.2;
+}
+
+/* Smooth scrolling — disabled for users who prefer reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* ─── 3. Utility classes ──────────────────────────────────────────────────── */
+
+/* Container — max width + responsive horizontal padding */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+/* Section padding — consistent vertical rhythm */
+.section-pad {
+  padding-block: var(--section-pad-y);
+}
+
+/* Decorative gold rule — used as section divider */
+.gold-rule {
+  width: 3rem;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-gold-primary),
+    transparent
+  );
+  margin-inline: auto;
+}
+
+/* Display heading — hero level */
+.text-display {
+  font-size: var(--text-display);
+  letter-spacing: var(--tracking-display);
+  line-height: 1.1;
+}
+
+/* Fade-in animation for scroll reveals */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up var(--duration-slow) var(--ease-standard) both;
+}
+
+/* Respect prefers-reduced-motion — disable animations */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up {
+    animation: none;
+  }
+
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
