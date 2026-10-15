@@ -1,9 +1,9 @@
-import bridalScene from '../raw-assets/extracted/profile/p02-img02.jpeg'
-import loungeScene from '../raw-assets/extracted/profile/p05-img01.jpeg'
-import stageScene from '../raw-assets/extracted/profile/p06-img01.jpeg'
-import venueScene from '../raw-assets/extracted/profile/p08-img02.jpeg'
-import expoEntry from '../raw-assets/extracted/expo-mart/p04-img02.jpeg'
-import expoDrape from '../raw-assets/extracted/expo-mart/p08-img02.jpeg'
+const bridalScene = '/images/gallery/wedding-ambience.svg'
+const loungeScene = '/images/gallery/luxury-lounge.svg'
+const stageScene = '/images/gallery/stage-story.svg'
+const venueScene = '/images/gallery/premium-theme.svg'
+const expoEntry = '/images/gallery/hero-premium-events.svg'
+const expoDrape = '/images/gallery/premium-theme.svg'
 
 export type GalleryCategory =
   | 'All'
@@ -19,7 +19,7 @@ export type GalleryItem = {
   category: Exclude<GalleryCategory, 'All'>
   title: string
   alt: string
-  src: typeof bridalScene
+  src: string
   width: number
   height: number
 }

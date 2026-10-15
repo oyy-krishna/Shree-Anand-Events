@@ -1,0 +1,17 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1200" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4A1D22"/>
+      <stop offset="0.5" stop-color="#8A5A38"/>
+      <stop offset="1" stop-color="#D9B778"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="#1F1414"/>
+  <rect x="80" y="120" width="1040" height="660" rx="32" fill="url(#g1)" opacity="0.92"/>
+  <circle cx="960" cy="220" r="120" fill="rgba(255,255,255,0.1)"/>
+  <path d="M210 700C300 620 390 560 480 560C570 560 640 625 720 700V760H210V700Z" fill="#E6D7B0" fill-opacity="0.78"/>
+  <path d="M480 500L560 390H640L720 500H480Z" fill="#F0D9A2" fill-opacity="0.9"/>
+  <rect x="340" y="430" width="120" height="150" rx="22" fill="#F7E8C4" fill-opacity="0.8"/>
+  <rect x="760" y="430" width="120" height="150" rx="22" fill="#F7E8C4" fill-opacity="0.8"/>
+  <text x="600" y="820" text-anchor="middle" fill="#F7E8C4" font-family="Georgia, serif" font-size="58" font-weight="700">Wedding Ambience</text>
+</svg>

@@ -1,11 +1,3 @@
-import type { StaticImageData } from 'next/image'
-
-import heroImage from '../raw-assets/extracted/expo-mart/p04-img02.jpeg'
-import galleryOne from '../raw-assets/extracted/profile/p02-img02.jpeg'
-import galleryTwo from '../raw-assets/extracted/profile/p05-img01.jpeg'
-import galleryThree from '../raw-assets/extracted/profile/p06-img01.jpeg'
-import galleryFour from '../raw-assets/extracted/profile/p08-img02.jpeg'
-
 export type NavItem = {
   label: string
   href: string
@@ -24,9 +16,15 @@ export type StatItem = {
 
 export type GalleryHighlight = {
   title: string
-  image: StaticImageData
+  image: string
   alt: string
 }
+
+const heroImage = '/images/gallery/hero-premium-events.svg'
+const galleryOne = '/images/gallery/wedding-ambience.svg'
+const galleryTwo = '/images/gallery/luxury-lounge.svg'
+const galleryThree = '/images/gallery/stage-story.svg'
+const galleryFour = '/images/gallery/premium-theme.svg'
 
 export const navItems: NavItem[] = [
   { label: 'About', href: '/about' },

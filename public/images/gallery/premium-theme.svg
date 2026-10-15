@@ -1,0 +1,9 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#201315"/>
+  <rect x="160" y="120" width="880" height="660" rx="30" fill="#6C3A36"/>
+  <path d="M250 670C420 600 480 560 600 560C720 560 780 600 950 670V760H250V670Z" fill="#E8D3A5" fill-opacity="0.88"/>
+  <rect x="340" y="270" width="520" height="210" rx="22" fill="#D2AE6A" fill-opacity="0.8"/>
+  <rect x="220" y="215" width="130" height="420" rx="16" fill="#805438" fill-opacity="0.75"/>
+  <rect x="850" y="215" width="130" height="420" rx="16" fill="#805438" fill-opacity="0.75"/>
+  <text x="600" y="820" text-anchor="middle" fill="#F7E5B2" font-family="Georgia, serif" font-size="56" font-weight="700">Premium Theme</text>
+</svg>
