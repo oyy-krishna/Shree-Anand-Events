@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "shree-anand-events",
+  "main": ".open-next/worker.js",
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "shree-anand-events"
+    }
+  ]
+}
