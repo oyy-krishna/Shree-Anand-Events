@@ -1,10 +1,10 @@
 const pictureBase = '/images/Pictures'
-const bridalScene = `${pictureBase}/WhatsApp Image 2026-10-16 at 11.52.35 AM (5).jpeg`
-const loungeScene = `${pictureBase}/WhatsApp Image 2026-10-16 at 11.52.35 AM (7).jpeg`
-const stageScene = `${pictureBase}/WhatsApp Image 2026-10-16 at 11.52.35 AM (10).jpeg`
-const venueScene = `${pictureBase}/WhatsApp Image 2026-10-16 at 11.52.35 AM (11).jpeg`
-const expoEntry = `${pictureBase}/WhatsApp Image 2026-10-16 at 11.52.35 AM (12).jpeg`
-const expoDrape = `${pictureBase}/WhatsApp Image 2026-10-16 at 11.52.35 AM (13).jpeg`
+const bridalScene = `${pictureBase}/Lights.jpeg`
+const loungeScene = `${pictureBase}/sitting-area.jpeg`
+const stageScene = `${pictureBase}/stage.jpeg`
+const venueScene = `${pictureBase}/decoration.jpeg`
+const expoEntry = `${pictureBase}/Entrance.jpeg`
+const expoDrape = `${pictureBase}/Wall.jpeg`
 
 export type GalleryCategory =
   | 'All'

@@ -21,11 +21,11 @@ export type GalleryHighlight = {
 }
 
 const pictureBase = '/images/Pictures'
-const heroImage = `${pictureBase}/WhatsApp Image 2026-10-16 at 11.44.01 AM.jpeg`
-const galleryOne = `${pictureBase}/WhatsApp Image 2026-10-16 at 11.52.35 AM (5).jpeg`
-const galleryTwo = `${pictureBase}/WhatsApp Image 2026-10-16 at 11.52.35 AM (7).jpeg`
-const galleryThree = `${pictureBase}/WhatsApp Image 2026-10-16 at 11.52.35 AM (10).jpeg`
-const galleryFour = `${pictureBase}/WhatsApp Image 2026-10-16 at 11.52.35 AM (11).jpeg`
+const heroImage = `${pictureBase}/Jhumar.jpeg`
+const galleryOne = `${pictureBase}/Lights.jpeg`
+const galleryTwo = `${pictureBase}/Luxuary.jpeg`
+const galleryThree = `${pictureBase}/stage.jpeg`
+const galleryFour = `${pictureBase}/unique.jpeg`
 
 export const navItems: NavItem[] = [
   { label: 'About', href: '/about' },
