@@ -44,12 +44,12 @@ export default function GalleryPage() {
 
   return (
     <>
-      <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Gallery' }]} />
+      <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Pictures' }]} />
       <main>
         <Section
-          eyebrow="Gallery"
-          title="Portfolio moments from premium wedding and event styling"
-          description="Filter the gallery by event type and explore the work that best reflects our design language and execution style."
+          eyebrow="Pictures"
+          title="Real moments from our premium wedding and event styling"
+          description="Browse our picture gallery and explore the work that best reflects our design language and execution style."
           align="center"
         >
           <div className="flex flex-wrap justify-center gap-3">

@@ -1,9 +1,10 @@
-const bridalScene = '/images/gallery/wedding-ambience.svg'
-const loungeScene = '/images/gallery/luxury-lounge.svg'
-const stageScene = '/images/gallery/stage-story.svg'
-const venueScene = '/images/gallery/premium-theme.svg'
-const expoEntry = '/images/gallery/hero-premium-events.svg'
-const expoDrape = '/images/gallery/premium-theme.svg'
+const pictureBase = '/images/Pictures'
+const bridalScene = `${pictureBase}/WhatsApp Image 2026-10-16 at 11.52.35 AM (5).jpeg`
+const loungeScene = `${pictureBase}/WhatsApp Image 2026-10-16 at 11.52.35 AM (6).jpeg`
+const stageScene = `${pictureBase}/WhatsApp Image 2026-10-16 at 11.52.35 AM (7).jpeg`
+const venueScene = `${pictureBase}/WhatsApp Image 2026-10-16 at 11.52.35 AM (8).jpeg`
+const expoEntry = `${pictureBase}/WhatsApp Image 2026-10-16 at 11.52.35 AM (9).jpeg`
+const expoDrape = `${pictureBase}/WhatsApp Image 2026-10-16 at 11.52.35 AM (10).jpeg`
 
 export type GalleryCategory =
   | 'All'
