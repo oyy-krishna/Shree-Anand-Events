@@ -11,10 +11,10 @@
 Scaffold from the first Chunk 0 pass is in place:
 
 - Next.js App Router + TypeScript + ESLint + Prettier
-- Folder layout: `app/`, `components/{layout,ui,sections,forms}/`, `content/blog/`, `lib/`, `public/images/`, `docs/`, `raw-assets/` (gitignored)
+- Folder layout: `app/`, `components/{layout,ui,sections,forms}/`, `content/blog/`, `lib/`, `public/images/`, `docs/`
 - Brand fonts wired in `app/layout.tsx` (Libre Baskerville + Poppins)
 - Placeholder home page, `.env.example`, design-token stubs
-- Both compressed client PDFs copied into `raw-assets/` and images extracted
+- Asset extraction work was archived locally and is not required for the live app
 
 This document closes Chunk 0: stack confirmation, sampled tokens, asset inventory, conflicts/gaps, and files still needed from you.
 
@@ -85,15 +85,15 @@ These replace the earlier approximated values in `globals.css` / `lib/tokens.ts`
 
 ## 5. Asset inventory summary
 
-Full tables: `raw-assets/asset-inventory.md` (gitignored with PDFs; a curated copy lives in `docs/asset-inventory.md`).
+Full tables are maintained in `docs/asset-inventory.md`.
 
 ### Supplied files
 
 | File | Location | Notes |
 |---|---|---|
 | Gold crest logo | `public/images/logo/shree-anand-crest-logo.jpg` | Working primary; **opaque cream BG** — need transparent PNG/SVG |
-| Shree Anand Profile (compressed) | `raw-assets/shree-anand-profile.pdf` | Extracted → `raw-assets/extracted/profile/` |
-| Expo Mart 21 Nov (compressed) | `raw-assets/expo-mart.pdf` | Extracted → `raw-assets/extracted/expo-mart/` |
+| Shree Anand Profile (compressed) | Historical extraction archive, not required in the app | Used during planning only |
+| Expo Mart 21 Nov (compressed) | Historical extraction archive, not required in the app | Used during planning only |
 | Logo B (plate roundel) | Embedded 5× in Expo Mart pages | Same file hash; usable as secondary mark only |
 | Logo C (wordmark) | Not as a clean standalone file | Seen inside photos only |
 

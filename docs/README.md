@@ -42,7 +42,6 @@ lib/            Utilities (tokens, metadata factory, gallery data)
 public/
   images/       Web-optimised photos (WebP + JPEG fallback)
 docs/           Project documentation (this folder)
-raw-assets/     PDFs + extractions (gitignored)
 ```
 
 ## Docs

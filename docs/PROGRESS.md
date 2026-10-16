@@ -16,7 +16,6 @@
 - `content/blog/` exists for future MDX blog posts
 - `docs/` includes the project plan and content tracking files
 - `public/` exists for static assets
-- `raw-assets/` contains the supplied PDF assets and extracted content
 - `.env.example` and `.env.local` exist for environment variables
 
 ## What is missing

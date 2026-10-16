@@ -34,9 +34,6 @@ yarn-error.log*
 .env*
 !.env.example
 
-# Raw / original client assets (PDFs, high-res photos) — keep outside the repo
-/raw-assets/
-
 # vercel
 .vercel
 

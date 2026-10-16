@@ -1,7 +1,7 @@
 # Asset Inventory (curated)
 
-Full machine-generated list: `raw-assets/asset-inventory.md` (gitignored with PDFs).  
 This file is the **committed** summary for the team and viva.
+The original PDF extraction archive was removed from the repo; use this curated list as the source of truth.
 
 **Sources:** compressed Profile + Expo Mart PDFs extracted 14 Oct 2026.  
 **Rule:** do not upscale low-res images; ask for originals instead.

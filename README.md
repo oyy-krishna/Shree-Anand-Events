@@ -33,5 +33,5 @@ Open [http://localhost:3000](http://localhost:3000).
 ## Important
 
 - Never invent client facts — see `docs/content-todo.md`
-- Raw PDFs live in `raw-assets/` (gitignored)
+- Use committed assets in `public/images/` and the curated inventory in `docs/asset-inventory.md`
 - Secrets only in `.env.local` (never commit)
