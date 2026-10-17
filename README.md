@@ -1,26 +1,24 @@
-# Shree Anand Caterers & Decorators
+# Shree Anand Events
 
-Production website for **Shree Anand** — luxury wedding planning, catering, décor, and event experiences in Noida.
+Production website for **Shree Anand Events** — luxury wedding planning, catering, décor, and event experiences in Noida.
 
 Live site: [https://shreeanandevents.com/](https://shreeanandevents.com/)
 
-This repository contains the Next.js project used to build and maintain the company website, including landing pages, blog content, gallery structure, contact flow, and project documentation.
-
-Full project docs: [`docs/README.md`](docs/README.md) · Chunk 0 plan: [`docs/chunk-0-plan.md`](docs/chunk-0-plan.md)
+This repository contains the production Next.js site used to market the brand, present services, highlight gallery work, publish blog content, and capture enquiries.
 
 ## Stack
 
-Next.js 16 (App Router) · TypeScript · Tailwind CSS v4 · MDX blog · Resend · Vercel
+Next.js 16 · TypeScript · Tailwind CSS v4
 
 ## Features
 
-- Premium wedding/event brand presentation
-- Service pages for planning, catering, décor, and events
+- Premium event-brand presentation
+- Service pages for wedding planning, catering, décor, and event management
 - Gallery and blog sections
-- Contact and enquiry form integration
+- Contact and enquiry form flow
 - SEO-friendly app structure
 
-## Quick start
+## Local setup
 
 ```bash
 npm install
@@ -30,20 +28,18 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-## Scripts
+## Useful scripts
 
-| Command | Purpose |
-|---|---|
-| `npm run dev` | Development server |
-| `npm run build` | Production build |
-| `npm run start` | Serve production build |
-| `npm run lint` | ESLint |
-| `npm run typecheck` | TypeScript check |
-| `npm run format` | Prettier |
+```bash
+npm run dev
+npm run build
+npm run start
+npm run lint
+npm run typecheck
+```
 
-## Project notes
+## Notes
 
-- Never invent client facts — see [`docs/content-todo.md`](docs/content-todo.md)
-- Use committed assets in `public/images/` and the curated inventory in [`docs/asset-inventory.md`](docs/asset-inventory.md)
-- Secrets only in `.env.local` (never commit)
-- The live production site is available at [https://shreeanandevents.com/](https://shreeanandevents.com/)
+- Real secrets stay in `.env.local` and are never committed.
+- Keep the live site in sync with the approved content and assets in `public/` and `content/`.
+- Use the repo for production code only; generated caches are cleaned locally before deployment.

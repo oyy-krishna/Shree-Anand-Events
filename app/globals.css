@@ -19,9 +19,9 @@
 /* ─── 1. Design Tokens ────────────────────────────────────────────────────── */
 
 @theme inline {
-  /* ── Fonts are injected by next/font onto the html element as CSS vars.
-     Tailwind picks them up via the className applied in layout.tsx.
-     No explicit font tokens needed here. ────────────────────────────────── */
+  /* Offline-safe font stack: no external requests required for builds or runtime. */
+  --font-sans: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-serif: 'Georgia', 'Times New Roman', serif;
 
   /* ── Colour palette ─────────────────────────────────────────────────────── */
 
